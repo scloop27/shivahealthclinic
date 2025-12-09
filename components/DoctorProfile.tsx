@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, GraduationCap, Stethoscope, Award, Calendar, Briefcase, Globe, ScrollText, Users, HeartHandshake } from 'lucide-react';
 
-interface DoctorProfileProps {
-  onBack: () => void;
-}
-
-const DoctorProfile: React.FC<DoctorProfileProps> = ({ onBack }) => {
+const DoctorProfile: React.FC = () => {
   // Scroll to top when mounted
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,13 +13,13 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({ onBack }) => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 shadow-sm">
         <div className="max-w-7xl mx-auto px-6">
-          <button 
-            onClick={onBack} 
+          <Link 
+            to="/" 
             className="group flex items-center text-gray-600 hover:text-teal font-medium transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Home
-          </button>
+          </Link>
         </div>
       </nav>
 
@@ -286,9 +283,9 @@ const DoctorProfile: React.FC<DoctorProfileProps> = ({ onBack }) => {
              <Calendar className="w-16 h-16 mx-auto mb-6 opacity-90" />
              <h3 className="text-3xl md:text-4xl font-bold mb-4">Ready to prioritize your health?</h3>
              <p className="text-teal-100 mb-10 max-w-2xl mx-auto text-lg">Dr. Gohokar is currently accepting new patients. Experience compassionate care from a doctor who truly listens.</p>
-             <button onClick={onBack} className="bg-white text-teal font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-all hover:scale-105">
+             <Link to="/" className="inline-block bg-white text-teal font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-all hover:scale-105">
                Schedule Appointment
-             </button>
+             </Link>
         </div>
 
       </div>

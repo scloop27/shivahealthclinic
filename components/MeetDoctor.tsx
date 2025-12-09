@@ -1,11 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Award } from 'lucide-react';
 
-interface MeetDoctorProps {
-  onKnowMore: () => void;
-}
-
-const MeetDoctor: React.FC<MeetDoctorProps> = ({ onKnowMore }) => {
+const MeetDoctor: React.FC = () => {
   return (
     <section className="bg-cream py-24 relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -50,13 +47,13 @@ const MeetDoctor: React.FC<MeetDoctorProps> = ({ onKnowMore }) => {
                 Dedicated to providing compassionate, comprehensive care for patients of all ages. Dr. Gohokar focuses on preventative medicine and long-term wellness strategies.
             </p>
 
-            <button 
-                onClick={onKnowMore}
+            <Link 
+                to="/aboutdr.nikhil"
                 className="group bg-teal hover:bg-teal-dark text-white rounded-full px-8 py-4 font-bold transition-all shadow-lg hover:shadow-xl flex items-center gap-3"
             >
                 Know More 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
         </div>
 
       </div>

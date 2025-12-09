@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,19 +12,13 @@ import Contact from './components/Contact';
 import Assistant from './components/Assistant';
 import DoctorProfile from './components/DoctorProfile';
 
-const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<'home' | 'doctor'>('home');
-
-  if (currentView === 'doctor') {
-    return <DoctorProfile onBack={() => setCurrentView('home')} />;
-  }
-
+const HomePage: React.FC = () => {
   return (
     <div className="font-sans antialiased text-gray-900 bg-cream min-h-screen">
       <Navbar />
       <Hero />
       <About />
-      <MeetDoctor onKnowMore={() => setCurrentView('doctor')} />
+      <MeetDoctor />
       <Services />
       <Insurance />
       <Testimonials />
@@ -31,6 +26,17 @@ const App: React.FC = () => {
       <Contact />
       <Assistant />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/aboutdr.nikhil" element={<DoctorProfile />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
