@@ -37,22 +37,20 @@ const Hero: React.FC = () => {
 
                 {/* Subheading */}
                 <p className="text-lg text-gray-500 mb-4 max-w-xl font-normal leading-relaxed">
-                    Comprehensive Primary Care, DOT/CDL physicals, and specialized pain management injections. Dr. Gohokar empowers you to take charge of your health through prevention, education, and compassionate care.
+                    Comprehensive primary care, DOT/CDL physicals, and specialized pain management — delivered with prevention-focused, compassionate care for patients of all ages.
                 </p>
                 
                 {/* Location Signal */}
                 <p className="text-base text-teal font-medium mb-10">
-                    Serving Fall River & surrounding Massachusetts communities
+                    📍 Trusted primary care for Fall River and nearby Massachusetts communities
                 </p>
 
                 {/* Buttons */}
                 <div className="flex flex-wrap items-center gap-4 mb-16">
                     <a href="tel:617-251-5065" className="bg-teal hover:bg-teal-dark text-white rounded-full px-8 py-4 font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
-                        <Phone className="w-5 h-5" /> Call Now
+                        <Phone className="w-5 h-5" /> Call Now to Schedule a Visit
                     </a>
-                    <a href="#contact" className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 rounded-full px-8 py-4 font-bold transition-all shadow-sm hover:shadow-md flex items-center gap-2">
-                        Contact us <span className="text-xl leading-none">→</span>
-                    </a>
+                 
                 </div>
 
                 {/* Stats / Features */}

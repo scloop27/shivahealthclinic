@@ -1,29 +1,29 @@
 import React from 'react';
-import { Heart, Brain, Globe } from 'lucide-react';
+import { Heart, Brain, Globe, ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
     <section 
       id="about" 
-      className="w-full h-min flex flex-col justify-center items-center py-20 bg-white overflow-hidden content-center flex-nowrap gap-[10px] scroll-mt-32"
+      className="w-full py-24 bg-white scroll-mt-32"
     >
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left Badge Column */}
             <div className="lg:col-span-2">
-                <span className="inline-block px-4 py-1.5 rounded-full border border-gray-100 text-sm font-medium text-teal bg-teal/5 cursor-default">
-                    Our Vision
+                <span className="inline-block px-4 py-1.5 rounded-full border border-gray-100 text-sm font-medium text-teal-dark bg-teal/5 cursor-default">
+                    Care Philosophy
                 </span>
             </div>
 
             {/* Right Content Column */}
             <div className="lg:col-span-10 flex flex-col gap-16">
-                
+
                 {/* Vision Text Content */}
                 <div className="animate-fade-in">
                     <h2 className="text-4xl md:text-5xl font-sans font-medium text-gray-900 tracking-tight leading-[1.15] mb-8">
                         Healing the individual to <span className="text-teal font-serif italic">transform society</span>.
                     </h2>
-                    
+
                     <div className="space-y-6 text-lg md:text-xl text-gray-500 font-normal leading-relaxed max-w-4xl">
                         <p>
                             Currently, our healthcare system faces significant challenges. Despite spending more on healthcare than any other nation, our investment is not translating into better overall health for our society. 
@@ -31,32 +31,49 @@ const About: React.FC = () => {
                         <p>
                             Dr. Gohokar envisions a transformative shift. We believe that true, complete health lies in nurturing both a <strong className="text-gray-800 font-semibold">healthy mind</strong> and a <strong className="text-gray-800 font-semibold">healthy body</strong>. 
                         </p>
-                        <p>
-                            Our goal is to bring you the "pearls of health"—essential knowledge and practical tools. By strengthening the individual first, we empower them to uplift their family, extend wellness into their community, and inspire a broader societal change.
-                        </p>
                     </div>
 
-                    {/* Concept Pills */}
-                    <div className="flex flex-wrap gap-4 mt-10">
-                        <div className="flex items-center gap-3 text-base font-bold text-gray-900 bg-white border border-gray-200 px-6 py-4 rounded-full shadow-sm hover:border-teal/30 transition-colors">
-                            <Brain className="w-5 h-5 text-teal" strokeWidth={2} /> Healthy Mind
+                    {/* Care Philosophy Flow */}
+                    <div className="mt-12 p-8 bg-gray-50/50 rounded-3xl border border-gray-100">
+                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-8 text-center md:text-left">Our Care Philosophy</h3>
+
+                        <div className="flex flex-col md:flex-row items-center justify-start gap-4 select-none">
+                            {/* Healthy Mind - Outlined */}
+                            <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-300 bg-white text-gray-700 font-medium w-full md:w-auto justify-center">
+                                <Brain className="w-5 h-5 text-teal" strokeWidth={2} /> 
+                                <span>Healthy Mind</span>
+                            </div>
+
+                            {/* Arrow */}
+                            <ArrowRight className="w-5 h-5 text-gray-300 rotate-90 md:rotate-0 shrink-0" />
+
+                            {/* Healthy Body - Outlined */}
+                            <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-300 bg-white text-gray-700 font-medium w-full md:w-auto justify-center">
+                                <Heart className="w-5 h-5 text-teal" strokeWidth={2} /> 
+                                <span>Healthy Body</span>
+                            </div>
+
+                            {/* Arrow */}
+                            <ArrowRight className="w-5 h-5 text-gray-300 rotate-90 md:rotate-0 shrink-0" />
+
+                            {/* Healthy Society - Filled (Outcome) */}
+                            <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-teal text-white font-bold shadow-lg shadow-teal/10 w-full md:w-auto justify-center border border-transparent">
+                                <Globe className="w-5 h-5 text-white" strokeWidth={2} /> 
+                                <span>Healthy Society</span>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-3 text-base font-bold text-gray-900 bg-white border border-gray-200 px-6 py-4 rounded-full shadow-sm hover:border-teal/30 transition-colors">
-                            <Heart className="w-5 h-5 text-teal" strokeWidth={2} /> Healthy Body
-                        </div>
-                        <div className="hidden sm:flex items-center text-gray-300">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </div>
-                        <div className="flex items-center gap-3 text-base font-bold text-white bg-teal shadow-xl shadow-teal/20 px-6 py-4 rounded-full">
-                            <Globe className="w-5 h-5 text-white" strokeWidth={2} /> Healthy Society
-                        </div>
+
+                        {/* Explanatory Sentence */}
+                        <p className="mt-6 text-gray-500 text-sm md:text-base leading-relaxed text-center md:text-left">
+                            By strengthening the individual first, we empower them to uplift their family, extend wellness into their community, and inspire a broader societal change.
+                        </p>
                     </div>
                 </div>
 
                 {/* Stats / Highlights Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-12">
                      <div className="flex flex-col gap-1">
-                        <span className="text-4xl font-semibold text-gray-900 tracking-tight">12+</span>
+                        <span className="text-4xl font-semibold text-gray-900 tracking-tight">13+</span>
                         <span className="text-gray-500 text-sm font-medium uppercase tracking-wide">Years Experience</span>
                      </div>
                      <div className="flex flex-col gap-1">

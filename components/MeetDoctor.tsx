@@ -11,12 +11,12 @@ const MeetDoctor: React.FC = () => {
         <div className="order-2 lg:order-1 relative">
             <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-teal-light aspect-[4/5] max-w-md mx-auto lg:mx-0">
                 <img 
-                src="/dr.webp"
+                src="/2nd.png"
                 onError={(e) => {
-                    e.currentTarget.src = "/dr.png";
+                    e.currentTarget.src = "/dr.webp";
                 }}
                 alt="Dr. Nikhil Gohokar" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-dark/60 via-transparent to-transparent"></div>
             </div>
