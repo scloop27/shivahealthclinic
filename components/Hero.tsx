@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
 
                 {/* Heading */}
                 <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-sans font-semibold text-gray-900 tracking-tight leading-[1.1] mb-6">
-                    Your health is <span className="block text-teal">our first priority</span>
+                    Compassionate care <span className="block text-teal">closer to home</span>
                 </h1>
 
                 {/* Subheading */}
