@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Quote, ExternalLink } from 'lucide-react';
+import { Star, Quote, Phone, Calendar } from 'lucide-react';
 
 const reviews = [
   {
@@ -94,16 +94,21 @@ const Testimonials: React.FC = () => {
           ))}
         </div>
 
-        {/* Zocdoc Button */}
-        <div className="flex justify-center">
+        {/* Schedule Your Visit Button */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <a 
-                href="https://www.zocdoc.com/practice/blessings-medical-clinic-113826" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-[#fef08a] hover:bg-[#fde047] text-yellow-900 font-bold py-4 px-8 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
+                href="tel:617-251-5065"
+                className="bg-teal hover:bg-teal-dark text-white font-bold py-4 px-8 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
             >
-                Read more reviews on Zocdoc
-                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                <Phone className="w-5 h-5" />
+                Call to Schedule Your Visit
+            </a>
+            <a 
+                href="#contact"
+                className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 font-bold py-4 px-8 rounded-full transition-all shadow-sm hover:shadow-md flex items-center gap-2"
+            >
+                <Calendar className="w-5 h-5 text-teal" />
+                Contact Us
             </a>
         </div>
 

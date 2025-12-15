@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, ArrowUpRight, Headset, ShieldCheck } from 'lucide-react';
+import { Star, ArrowUpRight, Headset, ShieldCheck, Phone } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
                             <Star className="w-3.5 h-3.5 fill-current" />
                             <Star className="w-3.5 h-3.5 fill-current" />
                         </div>
-                        <span className="text-xs font-semibold text-gray-700">Based on 150+ Reviews on Zocdoc</span>
+                        <span className="text-xs font-semibold text-gray-700">Based on 150+ Patient Reviews</span>
                     </div>
                 </div>
 
@@ -41,8 +41,11 @@ const Hero: React.FC = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-wrap items-center gap-6 mb-16">
-                    <a href="#contact" className="bg-teal hover:bg-teal-dark text-white rounded-full px-8 py-4 font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-4 mb-16">
+                    <a href="tel:617-251-5065" className="bg-teal hover:bg-teal-dark text-white rounded-full px-8 py-4 font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
+                        <Phone className="w-5 h-5" /> Call Now
+                    </a>
+                    <a href="#contact" className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 rounded-full px-8 py-4 font-bold transition-all shadow-sm hover:shadow-md flex items-center gap-2">
                         Contact us <span className="text-xl leading-none">→</span>
                     </a>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 
 const Navbar: React.FC = () => {
@@ -31,10 +31,14 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="hidden md:block">
-            <a href="#contact" className="bg-teal hover:bg-teal-dark text-white font-semibold py-3 px-6 rounded-full transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2">
-              Contact us <span className="text-lg">→</span>
+          {/* Phone Number & Call to Action */}
+          <div className="hidden md:flex items-center gap-4">
+            <a href="tel:617-251-5065" className="flex items-center gap-2 text-gray-700 hover:text-teal font-semibold transition-colors">
+              <Phone className="w-5 h-5 text-teal" />
+              <span>617-251-5065</span>
+            </a>
+            <a href="tel:617-251-5065" className="bg-teal hover:bg-teal-dark text-white font-semibold py-3 px-6 rounded-full transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2">
+              Call Now <span className="text-lg">→</span>
             </a>
           </div>
 
@@ -65,8 +69,12 @@ const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="w-full text-center bg-teal text-white font-bold block px-3 py-3 rounded-full text-base mt-6 shadow-md">
-              Contact us
+            <a href="tel:617-251-5065" className="flex items-center gap-2 px-3 py-3 text-gray-800 font-semibold">
+              <Phone className="w-5 h-5 text-teal" />
+              617-251-5065
+            </a>
+            <a href="tel:617-251-5065" className="w-full text-center bg-teal text-white font-bold block px-3 py-3 rounded-full text-base mt-6 shadow-md">
+              Call Now
             </a>
           </div>
         </div>

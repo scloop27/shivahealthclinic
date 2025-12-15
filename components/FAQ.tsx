@@ -1,46 +1,46 @@
 import React, { useState } from 'react';
-import { ChevronRight, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const faqData = [
   {
     question: "How soon can I make an appointment with Dr. Nikhil Gohokar?",
-    answer: "Generally, Dr. Nikhil Gohokar has appointments available on Zocdoc within 1 week. You can see Dr. Gohokar's earliest availability on Zocdoc and make an appointment online."
+    answer: "We often have same-day or next-day appointments available for direct callers. Call us at 617-251-5065 for the fastest service and to check our current availability."
   },
   {
     question: "Is Dr. Nikhil Gohokar accepting new patients?",
-    answer: "Dr. Nikhil Gohokar generally accepts new patients on Zocdoc. You can see Dr. Gohokar's earliest availability on Zocdoc and schedule an appointment online."
+    answer: "Yes! Dr. Gohokar is actively accepting new patients. Call our office at 617-251-5065 to schedule your first visit. New patients who call directly often get priority scheduling."
   },
   {
     question: "Does Dr. Nikhil Gohokar accept my insurance?",
-    answer: "Choose your insurance plan to verify if Dr. Gohokar is in-network. We accept most major providers including Blue Cross Blue Shield, UnitedHealthcare, Medicare, and MassHealth."
+    answer: "We accept most major insurance providers including Blue Cross Blue Shield, UnitedHealthcare, Medicare, and MassHealth. Call us at 617-251-5065 and our staff will verify your insurance coverage before your appointment."
   },
   {
-    question: "Can I make an appointment with Dr. Nikhil Gohokar online?",
-    answer: "Yes, you can make an appointment online with Dr. Gohokar using Zocdoc. It’s simple, secure, and free."
+    question: "How do I make an appointment?",
+    answer: "The fastest way to schedule is to call our office directly at 617-251-5065. Our friendly staff can answer your questions, verify your insurance, and find a time that works for you. Same-day availability is often available for callers."
   },
   {
     question: "What practice does Dr. Nikhil Gohokar work with?",
-    answer: "Dr. Nikhil Gohokar works with Blessings Medical Clinic."
+    answer: "Dr. Nikhil Gohokar is the owner and primary provider at Blessings Medical Clinic in Fall River, MA."
   },
   {
     question: "Where is Dr. Nikhil Gohokar's office located?",
-    answer: "Dr. Nikhil Gohokar's primary office is located at 415 Elsbree St, Suite 201, Fall River, MA. Please check our contact section for more details."
+    answer: "Our clinic is located at 415 Elsbree St, Suite 201, Fall River, MA. Call 617-251-5065 for directions or any questions about your visit."
   },
   {
     question: "Which board certifications does Dr. Nikhil Gohokar have?",
-    answer: "Dr. Nikhil Gohokar is certified by the American Board of Family Medicine."
+    answer: "Dr. Nikhil Gohokar is certified by the American Board of Family Medicine and is NRCME certified for DOT/CDL physicals."
   },
   {
     question: "What are common reasons for patients to see Dr. Nikhil Gohokar?",
-    answer: "Dr. Nikhil Gohokar frequently sees patients for Annual Physical, ENT Consultation, Foot Consultation, Illness, and Psychiatry Consultation. You can see other visit reasons for Dr. Nikhil Gohokar on their profile."
+    answer: "Dr. Gohokar provides comprehensive primary care including annual physicals, illness visits, chronic disease management, DOT/CDL physicals, and specialized pain management injections. Call 617-251-5065 to discuss your specific healthcare needs."
   },
   {
     question: "What languages does Dr. Nikhil Gohokar speak?",
-    answer: "Dr. Nikhil Gohokar speaks English and Hindi."
+    answer: "Dr. Nikhil Gohokar is fluent in English, Hindi, Marathi, and Urdu, allowing him to serve a diverse patient community."
   },
   {
-    question: "How do patients rate Dr. Nikhil Gohokar in reviews?",
-    answer: "136 patients have reviewed Dr. Nikhil Gohokar. The overall rating for this doctor is 4.76/5. They have a 4.85/5 rating for bedside manner and a 4.57/5 rating for wait time. You can read individual reviews and ratings on their profile."
+    question: "What is the best way to reach the clinic?",
+    answer: "Call us directly at 617-251-5065 for the fastest response. Our team can help with scheduling, insurance questions, prescription refills, and any other inquiries. Direct callers often receive same-day callbacks and priority service."
   }
 ];
 

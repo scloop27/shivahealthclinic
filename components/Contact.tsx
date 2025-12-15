@@ -1,6 +1,6 @@
 import React from 'react';
 import { CONTACT_INFO } from '../constants';
-import { Phone, MapPin, ArrowRight, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -16,15 +16,15 @@ const Contact: React.FC = () => {
             
             <div className="relative z-10 max-w-3xl mx-auto">
                 <h2 className="text-4xl md:text-6xl font-sans font-medium text-white tracking-tight leading-[1.1] mb-8">
-                    Your wellness journey begins in one click
+                    Your wellness journey begins with one call
                 </h2>
                 <p className="text-teal-100 text-xl md:text-2xl mb-12 font-light leading-relaxed max-w-2xl mx-auto">
-                    Book your appointment today and experience expert care designed around you to be better
+                    Call us today and experience expert care designed around you. Same-day appointments often available.
                 </p>
                 <div className="flex justify-center">
-                    <button className="bg-white text-[#006d77] hover:bg-gray-100 font-bold text-lg py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2">
-                        Contact us <ArrowRight className="w-5 h-5" />
-                    </button>
+                    <a href="tel:617-251-5065" className="bg-white text-[#006d77] hover:bg-gray-100 font-bold text-lg py-4 px-10 rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-3">
+                        <Phone className="w-6 h-6" /> Call 617-251-5065
+                    </a>
                 </div>
             </div>
         </div>
@@ -50,10 +50,10 @@ const Contact: React.FC = () => {
                         <MapPin className="w-5 h-5 text-teal mt-1 shrink-0" />
                         <span className="text-gray-600">{CONTACT_INFO.address}</span>
                     </div>
-                    <div className="flex items-center gap-3 md:justify-end">
+                    <a href="tel:617-251-5065" className="flex items-center gap-3 md:justify-end hover:text-teal transition-colors">
                         <Phone className="w-5 h-5 text-teal shrink-0" />
                         <span className="text-gray-900 font-semibold">{CONTACT_INFO.phone}</span>
-                    </div>
+                    </a>
                     <div className="flex items-center gap-3 md:justify-end">
                         <Mail className="w-5 h-5 text-teal shrink-0" />
                         <span className="text-gray-600">{CONTACT_INFO.email}</span>

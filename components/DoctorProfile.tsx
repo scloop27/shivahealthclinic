@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, GraduationCap, Stethoscope, Award, Calendar, Briefcase, Globe, ScrollText, Users, HeartHandshake, Heart, BookOpen, Syringe, TrendingDown, Building } from 'lucide-react';
+import { ArrowLeft, GraduationCap, Stethoscope, Award, Calendar, Briefcase, Globe, ScrollText, Users, HeartHandshake, Heart, BookOpen, Syringe, TrendingDown, Building, Phone } from 'lucide-react';
 
 const DoctorProfile: React.FC = () => {
   useEffect(() => {
@@ -444,19 +444,20 @@ const DoctorProfile: React.FC = () => {
             Dr. Gohokar is currently accepting new patients at Blessings Medical Clinic. Experience healthcare from a physician who truly listens and cares.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/" 
-              className="inline-flex items-center justify-center bg-white text-teal font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-all hover:scale-105"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule an Appointment
-            </Link>
             <a 
               href="tel:617-251-5065" 
+              className="inline-flex items-center justify-center bg-white text-teal font-bold py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition-all hover:scale-105"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now: 617-251-5065
+            </a>
+            <Link 
+              to="/" 
               className="inline-flex items-center justify-center bg-amber-500 text-white font-bold py-4 px-10 rounded-full shadow-lg hover:bg-amber-400 transition-all hover:scale-105"
             >
-              Call: 617-251-5065
-            </a>
+              <Calendar className="w-5 h-5 mr-2" />
+              Back to Home
+            </Link>
           </div>
         </div>
       </section>
