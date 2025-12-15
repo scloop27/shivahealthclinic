@@ -36,8 +36,13 @@ const Hero: React.FC = () => {
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-lg text-gray-500 mb-10 max-w-xl font-normal leading-relaxed">
+                <p className="text-lg text-gray-500 mb-4 max-w-xl font-normal leading-relaxed">
                     Comprehensive Primary Care, DOT/CDL physicals, and specialized pain management injections. Dr. Gohokar empowers you to take charge of your health through prevention, education, and compassionate care.
+                </p>
+                
+                {/* Location Signal */}
+                <p className="text-base text-teal font-medium mb-10">
+                    Serving Fall River & surrounding Massachusetts communities
                 </p>
 
                 {/* Buttons */}
