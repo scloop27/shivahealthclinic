@@ -29,13 +29,16 @@ The application follows a single-page application pattern with section-based com
 - `Testimonials` - Patient reviews carousel
 - `FAQ` - Expandable accordion for common questions
 - `Contact` - Footer with contact information and CTA
-- `Assistant` - AI chatbot widget overlay
+- `Assistant` - Floating call-to-action button with soft nudge popup
 
-### AI Integration
-- **Service**: Google Gemini API (gemini-2.5-flash model)
-- **Purpose**: Virtual assistant chatbot for answering clinic-related questions
-- **Implementation**: Singleton pattern for API client initialization
-- **System Prompt**: Configured with clinic-specific information, safety guardrails for medical advice, and tone guidelines
+### Call-to-Action Widget
+- **Purpose**: Encourage patients to call the clinic for appointments
+- **Features**: 
+  - Radiating ripple animation to draw attention
+  - Soft nudge card appears after 4 seconds with "Accepting New Patients" message
+  - Direct phone call link (tel:6172515065)
+  - Hover label showing "Call Now"
+  - Badge with pinging animation for urgency
 
 ### Configuration
 - TypeScript configured with ESNext modules, React JSX, and path aliases (`@/*`)
