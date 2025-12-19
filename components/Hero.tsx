@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
 
                 {/* Heading */}
                 <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-sans font-semibold text-gray-900 tracking-tight leading-[1.1] mb-6">
-                    Trusted primary care <span className="block text-teal">for your whole family</span>
+                    Your health is <span className="block text-teal">our first priority</span>
                 </h1>
 
                 {/* Subheading */}
@@ -55,8 +55,8 @@ const Hero: React.FC = () => {
 
                 {/* Stats / Features */}
                 <div className="flex gap-12">
-                    <div className="flex items-start gap-4 group">
-                         <div className="p-3 bg-white rounded-2xl shadow-sm text-teal group-hover:text-coral transition-colors">
+                    <div className="flex items-start gap-4">
+                         <div className="p-3 bg-white rounded-2xl shadow-sm text-teal">
                             <Headset className="w-8 h-8" strokeWidth={1.5} />
                          </div>
                          <div>
@@ -64,8 +64,8 @@ const Hero: React.FC = () => {
                              <p className="text-sm text-gray-500 font-medium">Patient-centered care</p>
                          </div>
                     </div>
-                    <div className="flex items-start gap-4 group">
-                         <div className="p-3 bg-white rounded-2xl shadow-sm text-teal group-hover:text-coral transition-colors">
+                    <div className="flex items-start gap-4">
+                         <div className="p-3 bg-white rounded-2xl shadow-sm text-teal">
                             <ShieldCheck className="w-8 h-8" strokeWidth={1.5} />
                          </div>
                          <div>

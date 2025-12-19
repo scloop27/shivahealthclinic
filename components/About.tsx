@@ -1,97 +1,156 @@
-import React from 'react';
-import { Heart, Brain, Globe, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Brain, Heart, Users } from 'lucide-react';
 
 const About: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Clinic-focused imagery: Consultations, warm interactions, professional environment
+  const backgroundImages = [
+    {
+      src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?q=80&w=2000&auto=format&fit=crop", 
+      alt: "Doctor consulting with patient in a calm environment"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop", 
+      alt: "Pediatric checkup with family presence"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2000&auto=format&fit=crop",
+      alt: "Clinic staff interacting warmly in the hallway"
+    },
+    {
+       src: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2000&auto=format&fit=crop",
+       alt: "Attentive listening during medical consultation"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [backgroundImages.length]);
+
   return (
-    <section 
-      id="about" 
-      className="w-full py-24 bg-white scroll-mt-32"
-    >
-        <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Left Badge Column */}
-            <div className="lg:col-span-2">
-                <span className="inline-block px-4 py-1.5 rounded-full border border-gray-100 text-sm font-medium text-teal-dark bg-teal/5 cursor-default">
-                    Care Philosophy
-                </span>
+    <>
+      <section id="about" className="relative w-full h-[650px] md:h-[550px] overflow-hidden bg-slate-900">
+
+        {/* 1. Background Image Carousel - Content stays fixed, only images move */}
+        {backgroundImages.map((img, index) => (
+          <div 
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+            aria-hidden={index !== currentSlide}
+          >
+            <img 
+              src={img.src} 
+              alt={img.alt} 
+              className={`w-full h-full object-cover transform transition-transform duration-[8000ms] ease-linear ${
+                 index === currentSlide ? 'scale-110' : 'scale-100'
+              }`}
+            />
+          </div>
+        ))}
+
+        {/* 2. Dark Gradient Overlay for Readability */}
+        {/* Stronger on the left for text, lighter on right to show image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/75 to-slate-900/30 mix-blend-multiply"></div>
+
+        {/* Additional subtle dark tint to ensure WCAG contrast */}
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* 3. Fixed Content Overlay */}
+        <div className="relative z-10 h-full max-w-[1200px] mx-auto px-6 flex items-center justify-center md:justify-start">
+          <div className="max-w-2xl text-center md:text-left pt-10 md:pt-0">
+
+            {/* Label */}
+            <div className="mb-6 animate-fade-in">
+               <span className="inline-block py-1.5 px-4 rounded-full border border-teal/30 bg-teal/10 backdrop-blur-md text-teal-light text-xs font-bold tracking-[0.2em] uppercase shadow-sm">
+                 Core Philosophy
+               </span>
             </div>
 
-            {/* Right Content Column */}
-            <div className="lg:col-span-10 flex flex-col gap-16">
+            {/* Headline */}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-xl">
+              Healing the individual to <span className="text-teal-light italic font-serif">transform society.</span>
+            </h2>
 
-                {/* Vision Text Content */}
-                <div className="animate-fade-in">
-                    <h2 className="text-4xl md:text-5xl font-sans font-medium text-gray-900 tracking-tight leading-[1.15] mb-8">
-                        Healing the individual to <span className="text-teal font-serif italic">transform society</span>.
-                    </h2>
+            {/* Supporting Text */}
+            <p className="text-lg md:text-xl text-gray-200 mb-12 font-light leading-relaxed max-w-xl drop-shadow-md mx-auto md:mx-0">
+              We believe healthcare begins with the individual. 
+              By nurturing a healthy mind and a healthy body, 
+              we create stronger families, healthier communities, and lasting societal change.
+            </p>
 
-                    <div className="space-y-6 text-lg md:text-xl text-gray-500 font-normal leading-relaxed max-w-4xl">
-                        <p>
-                            Currently, our healthcare system faces significant challenges. Despite spending more on healthcare than any other nation, our investment is not translating into better overall health for our society. 
-                        </p>
-                        <p>
-                            Dr. Gohokar envisions a transformative shift. We believe that true, complete health lies in nurturing both a <strong className="text-gray-800 font-semibold">healthy mind</strong> and a <strong className="text-gray-800 font-semibold">healthy body</strong>. 
-                        </p>
-                    </div>
+            {/* Philosophy Pillars */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-12 text-white/95 justify-center md:justify-start">
+               <div className="flex items-center gap-3 group">
+                  <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/5 group-hover:bg-teal/20 transition-colors">
+                      <Brain className="w-5 h-5 text-teal-light" />
+                  </div>
+                  <span className="font-semibold tracking-wide text-lg sm:text-base">Healthy Mind</span>
+               </div>
 
-                    {/* Care Philosophy Flow */}
-                    <div className="mt-12 p-8 bg-gray-50/50 rounded-3xl border border-gray-100">
-                        <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-8 text-center md:text-left">Our Care Philosophy</h3>
+               <div className="hidden sm:block w-px h-8 bg-white/20"></div>
 
-                        <div className="flex flex-col md:flex-row items-center justify-start gap-4 select-none">
-                            {/* Healthy Mind - Outlined */}
-                            <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-300 bg-white text-gray-700 font-medium w-full md:w-auto justify-center">
-                                <Brain className="w-5 h-5 text-teal" strokeWidth={2} /> 
-                                <span>Healthy Mind</span>
-                            </div>
+               <div className="flex items-center gap-3 group">
+                  <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/5 group-hover:bg-teal/20 transition-colors">
+                      <Heart className="w-5 h-5 text-teal-light" />
+                  </div>
+                  <span className="font-semibold tracking-wide text-lg sm:text-base">Healthy Body</span>
+               </div>
 
-                            {/* Arrow */}
-                            <ArrowRight className="w-5 h-5 text-gray-300 rotate-90 md:rotate-0 shrink-0" />
+               <div className="hidden sm:block w-px h-8 bg-white/20"></div>
 
-                            {/* Healthy Body - Outlined */}
-                            <div className="flex items-center gap-3 px-6 py-3 rounded-full border border-gray-300 bg-white text-gray-700 font-medium w-full md:w-auto justify-center">
-                                <Heart className="w-5 h-5 text-teal" strokeWidth={2} /> 
-                                <span>Healthy Body</span>
-                            </div>
-
-                            {/* Arrow */}
-                            <ArrowRight className="w-5 h-5 text-gray-300 rotate-90 md:rotate-0 shrink-0" />
-
-                            {/* Healthy Society - Filled (Outcome) */}
-                            <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-teal text-white font-bold shadow-lg shadow-teal/10 w-full md:w-auto justify-center border border-transparent">
-                                <Globe className="w-5 h-5 text-white" strokeWidth={2} /> 
-                                <span>Healthy Society</span>
-                            </div>
-                        </div>
-
-                        {/* Explanatory Sentence */}
-                        <p className="mt-6 text-gray-500 text-sm md:text-base leading-relaxed text-center md:text-left">
-                            By strengthening the individual first, we empower them to uplift their family, extend wellness into their community, and inspire a broader societal change.
-                        </p>
-                    </div>
-                </div>
-
-                {/* Stats / Highlights Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-gray-100 pt-12">
-                     <div className="flex flex-col gap-1">
-                        <span className="text-4xl font-semibold text-gray-900 tracking-tight">13+</span>
-                        <span className="text-gray-500 text-sm font-medium uppercase tracking-wide">Years Experience</span>
-                     </div>
-                     <div className="flex flex-col gap-1">
-                        <span className="text-4xl font-semibold text-gray-900 tracking-tight">150+</span>
-                        <span className="text-gray-500 text-sm font-medium uppercase tracking-wide">5-Star Reviews</span>
-                     </div>
-                     <div className="flex flex-col gap-1">
-                        <span className="text-4xl font-semibold text-gray-900 tracking-tight">Global</span>
-                        <span className="text-gray-500 text-sm font-medium uppercase tracking-wide">Community Impact</span>
-                     </div>
-                     <div className="flex flex-col gap-1">
-                        <span className="text-4xl font-semibold text-gray-900 tracking-tight">100%</span>
-                        <span className="text-gray-500 text-sm font-medium uppercase tracking-wide">Patient Focus</span>
-                     </div>
-                </div>
+               <div className="flex items-center gap-3 group">
+                  <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm border border-white/5 group-hover:bg-teal/20 transition-colors">
+                      <Users className="w-5 h-5 text-teal-light" />
+                  </div>
+                  <span className="font-semibold tracking-wide text-lg sm:text-base">Healthy Community</span>
+               </div>
             </div>
+
+            {/* One-line reinforcement */}
+            <p className="text-sm md:text-base text-gray-400 font-medium italic border-l-2 border-teal pl-4 ml-4 md:ml-0 inline-block">
+              True care doesn’t stop at treatment — it extends into everyday life.
+            </p>
+
+          </div>
         </div>
-    </section>
+
+      </section>
+
+      {/* Stats Section Integrated Below Philosophy */}
+      <div className="bg-white py-16 border-b border-gray-50">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 text-center">
+
+              <div className="flex flex-col items-center justify-center">
+                  <span className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-tight">13+</span>
+                  <span className="text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">Years Experience</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center">
+                  <span className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-tight">150+</span>
+                  <span className="text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">5-Star Reviews</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center">
+                  <span className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-tight">Global</span>
+                  <span className="text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">Community Impact</span>
+              </div>
+
+              <div className="flex flex-col items-center justify-center">
+                  <span className="text-4xl md:text-5xl font-bold text-gray-900 mb-3 tracking-tight">100%</span>
+                  <span className="text-xs font-bold text-gray-500 tracking-[0.15em] uppercase">Patient Focus</span>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
