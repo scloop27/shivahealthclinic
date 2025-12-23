@@ -4,10 +4,6 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -31,9 +27,5 @@
         }
       ]
     }
-  ],
-  "trailingSlash": false,
-  "env": {
-    "NEXT_PUBLIC_BASE_URL": "@base_url"
-  }
+  ]
 }

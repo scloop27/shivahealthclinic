@@ -48,8 +48,7 @@ const About: React.FC = () => {
           >
             <img 
               src={img.src} 
-              alt={img.alt}
-              loading="lazy"
+              alt={img.alt} 
               className={`w-full h-full object-cover transform transition-transform duration-[10000ms] ease-linear ${
                  index === currentSlide ? 'scale-110' : 'scale-100'
               }`}

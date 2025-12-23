@@ -21,7 +21,6 @@ const MeetDoctor: React.FC = () => {
               <div className="relative rounded-[48px] overflow-hidden shadow-[0_20px_50px_rgba(0,109,119,0.15)] bg-teal-light group">
                 <img 
                   src="/dr.webp"
-                  loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000&auto=format&fit=crop";
                   }}

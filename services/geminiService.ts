@@ -41,6 +41,7 @@ export const sendMessageToGemini = async (message: string): Promise<string> => {
     
     return result.response.text() || "I'm sorry, I couldn't process that request right now.";
   } catch (error) {
+    console.error("Gemini API Error:", error);
     return "I'm having trouble connecting to the service. Please call us at 617-251-5065.";
   }
 };
