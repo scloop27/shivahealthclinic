@@ -116,7 +116,7 @@ const MeetDoctor: React.FC = () => {
                 onClick={() => navigate('/aboutdr.nikhil')}
                 className="w-full sm:w-auto bg-teal hover:bg-teal-dark text-white rounded-full px-10 py-5 font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 group hover:-translate-y-1"
               >
-                Discover Global Impact
+                Discover Dr Gohokar’s Impact
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 

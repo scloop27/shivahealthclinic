@@ -251,7 +251,9 @@ const DoctorProfile: React.FC = () => {
                 <div className="p-6 sm:p-8 md:p-16 flex flex-col justify-center">
                   <div className="inline-flex items-center gap-2 text-teal font-bold mb-4 sm:mb-6">
                     <TrendingDown className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span className="text-sm sm:text-base">High Impact Results</span>
+                    <span className="text-sm sm:text-base">
+                      High Impact Results
+                    </span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                     ER Can Wait Program
@@ -282,7 +284,12 @@ const DoctorProfile: React.FC = () => {
                     </div>
                   </div>
 
-                  <a href="https://www.bnhc.org/want-to-stay-healthy-out-of-the-hospital-this-group-can-help/" target="_blank" rel="noopener noreferrer" className="text-teal font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-sm sm:text-lg self-start hover:text-teal-dark">
+                  <a
+                    href="https://www.bnhc.org/want-to-stay-healthy-out-of-the-hospital-this-group-can-help/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-sm sm:text-lg self-start hover:text-teal-dark"
+                  >
                     Learn More About ER Can Wait{" "}
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
@@ -326,9 +333,9 @@ const DoctorProfile: React.FC = () => {
                          RECOMMENDED IMAGE SIZE: 1200x600 (2:1 aspect ratio)
                          Format: WebP
                       */
-                  src="/sharon_town.jpeg"
+                  src="USA Initiatives images/group_photo.webp"
                   alt="Community outreach"
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                     e.currentTarget.parentElement!.style.backgroundColor =
