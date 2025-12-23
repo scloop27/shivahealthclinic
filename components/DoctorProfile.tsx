@@ -161,18 +161,18 @@ const DoctorProfile: React.FC = () => {
                   <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-bold mb-6 tracking-wide shadow-lg">
                     {slide.tag}
                   </span>
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-md">
+                  <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-md">
                     {slide.headline}
                   </h1>
-                  <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light drop-shadow-sm">
+                  <p className="text-sm sm:text-base md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light drop-shadow-sm">
                     {slide.subtext}
                   </p>
                   <button
                     onClick={() => scrollToSection(slide.targetId)}
-                    className="group bg-white text-slate-900 hover:bg-teal hover:text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                    className="group bg-white text-slate-900 hover:bg-teal hover:text-white px-4 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-lg transition-all duration-300 flex items-center gap-2 shadow-xl hover:shadow-2xl hover:-translate-y-1"
                   >
                     {slide.cta}
-                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>
@@ -181,32 +181,32 @@ const DoctorProfile: React.FC = () => {
         ))}
 
         {/* Carousel Controls */}
-        <div className="absolute bottom-10 right-6 md:right-12 z-20 flex gap-4">
+        <div className="absolute bottom-6 sm:bottom-10 right-4 sm:right-6 md:right-12 z-20 flex gap-2 sm:gap-4">
           <button
             onClick={prevSlide}
-            className="p-3 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-sm"
+            className="p-2 sm:p-3 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-sm"
             aria-label="Previous Slide"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="p-3 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-sm"
+            className="p-2 sm:p-3 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-sm"
             aria-label="Next Slide"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
           </button>
         </div>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-10 left-6 md:left-12 z-20 flex gap-2">
+        <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 md:left-12 z-20 flex gap-2">
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`h-1.5 rounded-full transition-all duration-300 shadow-sm ${
                 idx === currentSlide
-                  ? "w-12 bg-teal"
+                  ? "w-8 sm:w-12 bg-teal"
                   : "w-6 bg-white/30 hover:bg-white/50"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
@@ -216,9 +216,9 @@ const DoctorProfile: React.FC = () => {
       </section>
 
       {/* SECTION: INTRO STRIP */}
-      <section className="bg-teal py-12 px-6 text-center">
+      <section className="bg-teal py-8 sm:py-12 px-4 sm:px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif italic text-white leading-relaxed">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-serif italic text-white leading-relaxed">
             "From Massachusetts to rural India, Dr. Nikhil Gohokar bridges
             clinical excellence and community-driven impact."
           </h2>
@@ -228,18 +228,18 @@ const DoctorProfile: React.FC = () => {
       {/* SECTION: GLOBAL INITIATIVES */}
       <div className="bg-slate-50">
         {/* PART 1: USA IMPACT (First as requested) */}
-        <section id="usa-impact" className="py-20 md:py-28">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col md:flex-row gap-6 items-end mb-12 border-b border-gray-200 pb-8">
+        <section id="usa-impact" className="py-12 sm:py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-end mb-8 sm:mb-12 border-b border-gray-200 pb-6 sm:pb-8">
               <div className="flex-1">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                   <Building className="w-4 h-4" /> USA Initiatives
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900">
                   Innovation at Home
                 </h2>
               </div>
-              <p className="text-xl text-gray-500 max-w-xl pb-2">
+              <p className="text-base sm:text-xl text-gray-500 max-w-xl pb-2">
                 Pioneering value-based care models that reduce emergency room
                 dependency and improve patient outcomes.
               </p>
@@ -248,46 +248,46 @@ const DoctorProfile: React.FC = () => {
             {/* ER Can Wait Feature */}
             <div className="bg-white rounded-[40px] overflow-hidden shadow-xl border border-gray-100 group hover:shadow-2xl transition-all duration-300">
               <div className="grid lg:grid-cols-2">
-                <div className="p-8 md:p-16 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 text-teal font-bold mb-6">
-                    <TrendingDown className="w-5 h-5" />
-                    <span>High Impact Results</span>
+                <div className="p-6 sm:p-8 md:p-16 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 text-teal font-bold mb-4 sm:mb-6">
+                    <TrendingDown className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <span className="text-sm sm:text-base">High Impact Results</span>
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                     ER Can Wait Program
                   </h3>
-                  <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+                  <p className="text-gray-600 text-sm sm:text-lg mb-6 sm:mb-8 leading-relaxed">
                     A groundbreaking value-based care program designed to reduce
                     emergency department visits through proactive patient
                     management. By shifting care to the clinic, we save patients
                     time, reduce costs, and provide better continuity of care.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-6 mb-10">
-                    <div className="bg-slate-50 p-6 rounded-2xl">
-                      <span className="block text-4xl font-bold text-blue-600 mb-1">
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-10">
+                    <div className="bg-slate-50 p-4 sm:p-6 rounded-2xl">
+                      <span className="block text-2xl sm:text-4xl font-bold text-blue-600 mb-1">
                         78%
                       </span>
-                      <span className="text-sm text-gray-600 font-medium">
+                      <span className="text-xs sm:text-sm text-gray-600 font-medium">
                         Reduction in ED Visits
                       </span>
                     </div>
-                    <div className="bg-slate-50 p-6 rounded-2xl">
-                      <span className="block text-4xl font-bold text-teal mb-1">
+                    <div className="bg-slate-50 p-4 sm:p-6 rounded-2xl">
+                      <span className="block text-2xl sm:text-4xl font-bold text-teal mb-1">
                         Award
                       </span>
-                      <span className="text-sm text-gray-600 font-medium">
+                      <span className="text-xs sm:text-sm text-gray-600 font-medium">
                         "Great Session" at MA League Conference
                       </span>
                     </div>
                   </div>
 
-                  <a href="https://www.bnhc.org/want-to-stay-healthy-out-of-the-hospital-this-group-can-help/" target="_blank" rel="noopener noreferrer" className="text-teal font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-lg self-start hover:text-teal-dark">
+                  <a href="https://www.bnhc.org/want-to-stay-healthy-out-of-the-hospital-this-group-can-help/" target="_blank" rel="noopener noreferrer" className="text-teal font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-sm sm:text-lg self-start hover:text-teal-dark">
                     Learn More About ER Can Wait{" "}
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                 </div>
-                <div className="relative h-[400px] lg:h-auto bg-slate-200">
+                <div className="relative h-[250px] sm:h-[350px] lg:h-auto bg-slate-200">
                   <img
                     /* 
                            RECOMMENDED IMAGE SIZE: 800x600 or 1000x800 (Portrait or Square-ish) 
@@ -308,19 +308,19 @@ const DoctorProfile: React.FC = () => {
             </div>
 
             {/* Local Outreach Row */}
-            <div className="mt-8 grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-center">
-                <Users className="w-10 h-10 text-coral mb-4" />
-                <h4 className="text-xl font-bold text-gray-900 mb-2">
+            <div className="mt-6 sm:mt-8 grid md:grid-cols-3 gap-4 sm:gap-6">
+              <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-center">
+                <Users className="w-8 h-8 sm:w-10 sm:h-10 text-coral mb-4" />
+                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                   Sharon Town Health
                 </h4>
-                <p className="text-gray-500">
+                <p className="text-sm sm:text-base text-gray-500">
                   Youth substance abuse education and community health awareness
                   programs.
                 </p>
               </div>
               {/* Photo slots for USA work */}
-              <div className="md:col-span-2 rounded-3xl overflow-hidden relative h-64 md:h-auto group">
+              <div className="md:col-span-2 rounded-3xl overflow-hidden relative h-48 sm:h-64 md:h-auto group">
                 <img
                   /* 
                          RECOMMENDED IMAGE SIZE: 1200x600 (2:1 aspect ratio)

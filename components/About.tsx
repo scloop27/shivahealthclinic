@@ -35,7 +35,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <section id="about" className="relative w-full h-[650px] md:h-[600px] overflow-hidden bg-slate-900">
+      <section id="about" className="relative w-full h-[600px] sm:h-[650px] md:h-[600px] overflow-hidden bg-slate-900">
 
         {/* 1. Background Image Carousel - Content stays fixed, only images move */}
         {backgroundImages.map((img, index) => (
@@ -64,20 +64,20 @@ const About: React.FC = () => {
         <div className="absolute inset-0 bg-black/10"></div>
 
         {/* 3. Navigation Buttons */}
-        <div className="absolute right-8 bottom-12 z-20 flex gap-4 pointer-events-auto">
+        <div className="absolute right-4 sm:right-8 bottom-8 sm:bottom-12 z-20 flex gap-2 sm:gap-4 pointer-events-auto">
           <button 
             onClick={prevSlide}
-            className="p-4 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-md shadow-lg group"
+            className="p-2 sm:p-4 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-md shadow-lg group"
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-6 h-6 transform group-hover:-translate-x-0.5 transition-transform" />
+            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 transform group-hover:-translate-x-0.5 transition-transform" />
           </button>
           <button 
             onClick={nextSlide}
-            className="p-4 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-md shadow-lg group"
+            className="p-2 sm:p-4 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition-all backdrop-blur-md shadow-lg group"
             aria-label="Next image"
           >
-            <ChevronRight className="w-6 h-6 transform group-hover:translate-x-0.5 transition-transform" />
+            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 transform group-hover:translate-x-0.5 transition-transform" />
           </button>
         </div>
 
@@ -93,12 +93,12 @@ const About: React.FC = () => {
             </div>
 
             {/* Headline */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-2xl">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-sans font-bold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-2xl">
               Healing the individual to <span className="text-teal-light italic font-serif">transform society.</span>
             </h2>
 
             {/* Supporting Text */}
-            <p className="text-lg md:text-xl text-gray-100 mb-12 font-light leading-relaxed max-w-xl drop-shadow-lg mx-auto md:mx-0">
+            <p className="text-sm sm:text-base md:text-xl text-gray-100 mb-8 md:mb-12 font-light leading-relaxed max-w-xl drop-shadow-lg mx-auto md:mx-0">
               We believe healthcare begins with the individual. 
               By nurturing a healthy mind and a healthy body, 
               we create stronger families, healthier communities, and lasting societal change.

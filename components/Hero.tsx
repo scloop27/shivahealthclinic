@@ -31,12 +31,12 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-sans font-semibold text-gray-900 tracking-tight leading-[1.1] mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[4.5rem] font-sans font-semibold text-gray-900 tracking-tight leading-[1.1] mb-6">
                     Your health is <span className="block text-teal">our first priority</span>
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-lg text-gray-500 mb-4 max-w-xl font-normal leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-500 mb-4 max-w-xl font-normal leading-relaxed">
                     Comprehensive primary care, DOT/CDL physicals, and specialized pain management — delivered with prevention-focused, compassionate care for patients of all ages.
                 </p>
                 
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Stats / Features */}
-                <div className="flex gap-12">
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-12">
                     <div className="flex items-start gap-4">
                          <div className="p-3 bg-white rounded-2xl shadow-sm text-teal">
                             <Headset className="w-8 h-8" strokeWidth={1.5} />
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Right Column - Image Card */}
-            <div className="relative h-[600px] w-full order-1 lg:order-2 mb-10 lg:mb-0">
+            <div className="relative h-[350px] sm:h-[450px] md:h-[600px] w-full order-1 lg:order-2 mb-10 lg:mb-0">
                 <div className="absolute inset-0 rounded-[40px] overflow-hidden shadow-2xl bg-teal-light">
                      <img 
                         src="/dr.webp"
