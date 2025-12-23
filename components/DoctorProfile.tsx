@@ -282,10 +282,10 @@ const DoctorProfile: React.FC = () => {
                     </div>
                   </div>
 
-                  <button className="text-teal font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-lg self-start">
+                  <a href="https://www.bnhc.org/want-to-stay-healthy-out-of-the-hospital-this-group-can-help/" target="_blank" rel="noopener noreferrer" className="text-teal font-bold flex items-center gap-2 group-hover:gap-3 transition-all text-lg self-start hover:text-teal-dark">
                     Learn More About ER Can Wait{" "}
                     <ArrowRight className="w-5 h-5" />
-                  </button>
+                  </a>
                 </div>
                 <div className="relative h-[400px] lg:h-auto bg-slate-200">
                   <img
