@@ -81,6 +81,7 @@ const Hero: React.FC = () => {
                 <div className="absolute inset-0 rounded-[40px] overflow-hidden shadow-2xl bg-teal-light">
                      <img 
                         src="/dr.webp"
+                        loading="lazy"
                         onError={(e) => {
                             e.currentTarget.src = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1000&auto=format&fit=crop"; 
                         }}

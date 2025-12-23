@@ -302,6 +302,7 @@ const DoctorProfile: React.FC = () => {
                         */
                     src="/erteam.png"
                     alt="Medical team discussion"
+                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
@@ -335,6 +336,7 @@ const DoctorProfile: React.FC = () => {
                       */
                   src="/group_photo.webp"
                   alt="Community outreach"
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
@@ -376,6 +378,7 @@ const DoctorProfile: React.FC = () => {
                         */
                   src="/empoweringyouth.jpeg"
                   alt="Foundation work with children"
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
@@ -399,6 +402,7 @@ const DoctorProfile: React.FC = () => {
                         */
                   src="/Community Development.jpeg"
                   alt="Village gathering"
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
@@ -427,6 +431,7 @@ const DoctorProfile: React.FC = () => {
                     /* RECOMMENDED SIZE: 600x400 */
                     src="/Village Mini Clinics.jpeg"
                     alt="Mini Clinic"
+                    loading="lazy"
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
@@ -452,6 +457,7 @@ const DoctorProfile: React.FC = () => {
                     /* RECOMMENDED SIZE: 600x400 */
                     src="/Joint Injection Camps.jpeg"
                     alt="Injection Camp"
+                    loading="lazy"
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
@@ -477,6 +483,7 @@ const DoctorProfile: React.FC = () => {
                     /* RECOMMENDED SIZE: 600x400 */
                     src="/Alcohol Cessation.jpeg"
                     alt="Alcohol Cessation"
+                    loading="lazy"
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
