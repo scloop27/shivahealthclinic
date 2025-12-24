@@ -4,13 +4,13 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/*",
       "destination": "/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/public/(.*)",
+      "source": "/public/*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(webp|png|jpg|jpeg|gif|svg)$)",
+      "source": "/:file(.*\\.(webp|png|jpg|jpeg|gif|svg)$)",
       "headers": [
         {
           "key": "Cache-Control",
