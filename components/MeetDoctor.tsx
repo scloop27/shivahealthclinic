@@ -113,7 +113,7 @@ const MeetDoctor: React.FC = () => {
             {/* Actions */}
             <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
               <button 
-                onClick={() => navigate('/aboutdr.nikhil')}
+                onClick={() => navigate('/about/nikhil')}
                 className="w-full sm:w-auto bg-teal hover:bg-teal-dark text-white rounded-full px-10 py-5 font-bold text-lg transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 group hover:-translate-y-1"
               >
                 Discover Dr Gohokar’s Impact
