@@ -48,7 +48,7 @@ const DoctorProfile: React.FC = () => {
   const slides = [
     {
       id: 1, // USA - Credibility First
-      image: "/er.jpeg", // Replace with actual file in public folder
+      image: "/erteam.png", // Corrected filename
       tag: "🇺🇸 Community Health Innovation",
       headline: "Transforming Community Healthcare in America",
       subtext:
@@ -58,7 +58,7 @@ const DoctorProfile: React.FC = () => {
     },
     {
       id: 2, // India - Heart & Scale
-      image: "/org.png", // Replace with actual file in public folder
+      image: "/org.webp", // Corrected filename
       tag: "🇮🇳 My Village My Dream Foundation",
       headline: "Building Health & Hope at the Grassroots",
       subtext:
@@ -68,7 +68,7 @@ const DoctorProfile: React.FC = () => {
     },
     {
       id: 3, // Global Bridge
-      image: "/doc.png", // Replace with actual file in public folder
+      image: "/doctor.webp", // Corrected filename
       tag: "🌍 Medicine • Service • Impact",
       headline: "A Physician Driven by Global Impact",
       subtext:
