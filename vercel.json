@@ -5,7 +5,15 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/:path*",
+      "source": "/(css|js|img|fonts)/.*",
+      "destination": "/$1"
+    },
+    {
+      "source": "/(.*\\.(?:webp|png|jpg|jpeg|gif|svg|ico|js|css))$",
+      "destination": "/$1"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
