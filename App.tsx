@@ -1,17 +1,17 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import MeetDoctor from './components/MeetDoctor';
-import Services from './components/Services';
-import Insurance from './components/Insurance';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Assistant from './components/Assistant';
-import DoctorProfile from './components/DoctorProfile';
-import AnimatedSection from './components/AnimatedSection';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import MeetDoctor from "./components/MeetDoctor";
+import Services from "./components/Services";
+import Insurance from "./components/Insurance";
+import Testimonials from "./components/Testimonials";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Assistant from "./components/Assistant";
+import DoctorProfile from "./components/DoctorProfile";
+import AnimatedSection from "./components/AnimatedSection";
 
 const HomePage: React.FC = () => {
   return (
@@ -44,11 +44,26 @@ const HomePage: React.FC = () => {
   );
 };
 
+const AboutPage: React.FC = () => {
+  return (
+    <div className="font-sans antialiased text-gray-900 bg-cream min-h-screen">
+      <Navbar />
+      <div className="pt-24">
+        <AnimatedSection>
+          <About />
+        </AnimatedSection>
+      </div>
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/abt" element={<AboutPage />} />
         <Route path="/about/nikhil" element={<DoctorProfile />} />
       </Routes>
     </BrowserRouter>
