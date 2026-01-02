@@ -48,7 +48,7 @@ const DoctorProfile: React.FC = () => {
   const slides = [
     {
       id: 1, // USA - Credibility First
-      image: "/ii.webp", // Replace with actual file in public folder
+      image: "/er.jpeg", // Replace with actual file in public folder
       tag: "🇺🇸 Community Health Innovation",
       headline: "Transforming Community Healthcare in America",
       subtext:
@@ -58,7 +58,7 @@ const DoctorProfile: React.FC = () => {
     },
     {
       id: 2, // India - Heart & Scale
-      image: "/org.webp", // Replace with actual file in public folder
+      image: "/org.png", // Replace with actual file in public folder
       tag: "🇮🇳 My Village My Dream Foundation",
       headline: "Building Health & Hope at the Grassroots",
       subtext:
@@ -68,7 +68,7 @@ const DoctorProfile: React.FC = () => {
     },
     {
       id: 3, // Global Bridge
-      image: "/doctor.webp", // Replace with actual file in public folder
+      image: "/doc.png", // Replace with actual file in public folder
       tag: "🌍 Medicine • Service • Impact",
       headline: "A Physician Driven by Global Impact",
       subtext:
@@ -333,7 +333,7 @@ const DoctorProfile: React.FC = () => {
                          RECOMMENDED IMAGE SIZE: 1200x600 (2:1 aspect ratio)
                          Format: WebP
                       */
-                  src="/group_photo.webp"
+                  src="/sharon_town.jpeg"
                   alt="Community outreach"
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
